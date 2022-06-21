@@ -1,7 +1,6 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
-public class ThirdLargest {
+public class MultiplyNonIndex {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -10,15 +9,31 @@ public class ThirdLargest {
 		Scanner scan=new Scanner(System.in);
 		int n=scan.nextInt();
 		int[] array=new int[n];
+		int[] array1=new int[n];
 		System.out.println("Enter the values in the array");
 		for(int i=0;i<n;i++)
 		{
 			array[i]=scan.nextInt();
 		}
 		
-		Arrays.sort(array);
-			
-		System.out.println("The third largest element in the array is "+array[n-3]);
+		
+		for(int i=0;i<n;i++) 
+		{
+			array1[i]=1;
+			for(int j=0;j<n;j++)
+			{
+				if(j!=i)
+				{
+					array1[i]*=array[j];
+				}
+				
+			}
+		}
+		
+		for(int k=0;k<n;k++)
+		{
+			System.out.println(k+"-"+array1[k]);
+		}
 	}
 
 }

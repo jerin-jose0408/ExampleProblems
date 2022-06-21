@@ -1,8 +1,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class ThirdLargest {
-
+public class TC_49_Largest_Second_Last {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println("Enter the number of elements: ");
@@ -18,7 +17,8 @@ public class ThirdLargest {
 		
 		Arrays.sort(array);
 			
-		System.out.println("The third largest element in the array is "+array[n-3]);
+		System.out.println("The largest element in the array is "+array[n-1]);
+		System.out.println("The second largest element in the array is "+array[n-2]);
+		System.out.println("The least element in the array "+array[0]);
 	}
-
 }
